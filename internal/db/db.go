@@ -20,7 +20,7 @@ var DB *sql.DB
 // It also creates the necessary tables if they don't exist.
 func InitDB(cfg *config.Config) {
 	// Build connection string from config
-	connStr := fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=disable",
+	connStr := fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=require",
 		cfg.DBHost, cfg.DBPort, cfg.DBUser, cfg.DBPassword, cfg.DBName)
 
 	var err error
